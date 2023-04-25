@@ -11,7 +11,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
-st.title("Cat/Dog Streamlit Classifier")
+st.title("Cat🐱/Dog🐶 Streamlit Classifier")
 st.header("Please use within 10 times as quota limit for app")
 st.header("Please input an image to be classified:")
 
@@ -49,10 +49,10 @@ if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded file', use_column_width=True)
     st.write("")
-    st.write("Classifying please wait...")
+    st.write("🎯Classifying please wait...")
     label,conf = dog_cat_classifier(image, 'catdog2.h5')
     ## st.write("label:",label,"conf:",conf)
     if label == 1:
-        st.write("This is a Dog, with:",round(conf *100,2), "% confidence")
+        st.write("This is a Dog🐶, with:",round(conf *100,2), "% confidence")
     else:
-        st.write("This is a Cat, with:",round((1-conf)*100,2), "% confidence")
+        st.write("This is a Cat🐱, with:",round((1-conf)*100,2), "% confidence")
