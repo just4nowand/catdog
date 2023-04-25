@@ -50,7 +50,7 @@ if uploaded_image is not None:
     st.image(image, caption='Uploaded file', use_column_width=True)
     st.write("")
     st.write("Classifying please wait...")
-    label,conf = dog_cat_classifier(image, 'catdog.h5')
+    label,conf = dog_cat_classifier(image, 'catdog2.h5')
     ## st.write("label:",label,"conf:",conf)
     if label == 1:
         st.write("This is a Dog, with:",round(conf *100,2), "% confidence")
